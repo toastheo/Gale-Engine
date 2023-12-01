@@ -1,7 +1,7 @@
-project "App"
+project "Gale-Engine-App"
    kind "ConsoleApp"
    language "C++"
-   cppdialect "C++20"
+   cppdialect "C++17"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
@@ -12,12 +12,12 @@ project "App"
       "Source",
 
 	  -- Include Core
-	  "../Core/Source"
+	  "../Gale-Engine-Core/Source"
    }
 
    links
    {
-      "Core"
+      "Gale-Engine-Core"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
