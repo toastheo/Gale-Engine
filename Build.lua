@@ -9,8 +9,11 @@ workspace "Gale-Engine"
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
+group "Dependencies"
+   include "SFML"
+
 group "Core"
 	include "Gale-Engine-Core/Build-Core.lua"
-group ""
 
+group "Applications"
 include "Gale-Engine-App/Build-App.lua"

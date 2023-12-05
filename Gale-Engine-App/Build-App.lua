@@ -12,7 +12,10 @@ project "Gale-Engine-App"
       "Source",
 
 	  -- Include Core
-	  "../Gale-Engine-Core/Source"
+	  "../Gale-Engine-Core/Source",
+
+      -- Include SFML
+      "$(SolutionDir)SFML/include"
    }
 
    links
@@ -26,6 +29,7 @@ project "Gale-Engine-App"
    filter "system:windows"
        systemversion "latest"
        defines { "WINDOWS" }
+       libdirs { "$(SolutionDir)SFML/lib" }
 
    filter "configurations:Debug"
        defines { "DEBUG" }

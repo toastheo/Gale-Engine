@@ -9,7 +9,10 @@ project "Gale-Engine-Core"
 
    includedirs
    {
-      "Source"
+      "Source",
+
+      -- Include SFML
+      "$(SolutionDir)SFML/include"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
@@ -19,19 +22,84 @@ project "Gale-Engine-Core"
        systemversion "latest"
        defines { }
 
+       libdirs { "$(SolutionDir)SFML/lib"}
+
    filter "configurations:Debug"
-       defines { "DEBUG" }
+       defines { "DEBUG", "SFML_STATIC" }
        runtime "Debug"
        symbols "On"
+       links {
+            -- SMFL debug libaries
+            "sfml-graphics-s-d.lib",
+            "sfml-window-s-d.lib",
+            "sfml-audio-s-d.lib",
+            "sfml-network-s-d.lib",
+            "sfml-system-s-d.lib",
+
+            -- additional libaries
+            "opengl32.lib",
+            "freetype.lib",
+            "winmm.lib",
+            "gdi32.lib",
+            "openal32.lib",
+            "flac.lib",
+            "vorbisenc.lib",
+            "vorbisfile.lib",
+            "vorbis.lib",
+            "ogg.lib",
+            "ws2_32.lib"
+       }
 
    filter "configurations:Release"
-       defines { "RELEASE" }
+       defines { "RELEASE", "SFML_STATIC" }
        runtime "Release"
        optimize "On"
        symbols "On"
+       links {
+            -- SFML release libaries
+            "sfml-graphics-s.lib",
+            "sfml-window-s.lib",
+            "sfml-audio-s.lib",
+            "sfml-network-s.lib",
+            "sfml-system-s.lib",
+
+            -- additional libaries
+            "opengl32.lib",
+            "freetype.lib",
+            "winmm.lib",
+            "gdi32.lib",
+            "openal32.lib",
+            "flac.lib",
+            "vorbisenc.lib",
+            "vorbisfile.lib",
+            "vorbis.lib",
+            "ogg.lib",
+            "ws2_32.lib"
+       }
 
    filter "configurations:Dist"
-       defines { "DIST" }
+       defines { "DIST", "SFML_STATIC" }
        runtime "Release"
        optimize "On"
        symbols "Off"
+       links {
+        -- SFML release libaries
+        "sfml-graphics-s.lib",
+        "sfml-window-s.lib",
+        "sfml-audio-s.lib",
+        "sfml-network-s.lib",
+        "sfml-system-s.lib",
+
+        -- additional libaries
+        "opengl32.lib",
+        "freetype.lib",
+        "winmm.lib",
+        "gdi32.lib",
+        "openal32.lib",
+        "flac.lib",
+        "vorbisenc.lib",
+        "vorbisfile.lib",
+        "vorbis.lib",
+        "ogg.lib",
+        "ws2_32.lib"
+   }

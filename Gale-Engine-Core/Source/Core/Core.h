@@ -3,5 +3,6 @@
 namespace Core {
 
 	void PrintHelloWorld();
+	void TestSFML();
 
 }
