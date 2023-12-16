@@ -2,11 +2,11 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-#include "Sprite.h"
-#include "CircleShape.h"
-#include "RectangleShape.h"
-#include "ConvexShape.h"
-#include "Text.h"
+#include "Gale/Graphics/Sprite.h"
+#include "Gale/Graphics/CircleShape.h"
+#include "Gale/Graphics/RectangleShape.h"
+#include "Gale/Graphics/ConvexShape.h"
+#include "Gale/Graphics/Text.h"
 
 namespace ge 
 {

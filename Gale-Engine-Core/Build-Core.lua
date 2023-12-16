@@ -7,6 +7,19 @@ project "Gale-Engine-Core"
 
    files { "Source/**.h", "Source/**.cpp" }
 
+   vpaths 
+   {
+      -- General header and source
+      ["Header/*"] = { "Source/Gale/**/*.h" },
+      ["Source/*"] = { "Source/Gale/**/*.cpp" },
+
+      -- Specific subfolders
+      ["Header/System"] = { "Source/Gale/System/*.h" },
+      ["Header/Graphics"] = { "Source/Gale/Graphics/*.h" },
+      ["Source/System"] = { "Source/Gale/System/*.cpp" },
+      ["Source/Graphics"] = { "Source/Gale/Graphics/*.cpp" }
+   }
+
    includedirs
    {
       "Source",

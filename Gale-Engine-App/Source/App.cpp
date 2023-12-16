@@ -1,5 +1,5 @@
-#include <Core/Engine.h>
-#include <Core/Scene.h>
+#include "Gale/System/Engine.h"
+#include "Gale/System/Scene.h"
 using namespace ge;
 
 class Testszene : public Scene
