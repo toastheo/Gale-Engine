@@ -1,18 +1,13 @@
 # Gale Engine
 ## Introduction
-The Gale Engine is a simple 2D game engine, which was created by me in C++.
-Please note that this is my first engine and mainly has an educational purpose for me.
-It was written in C++ and uses the SFML library. The engine is divided into two parts: the core and the app.
-The core is a static library and contains the core functions of the engine. 
-The app is the application for executing the engine.
+The Gale Engine is a simple 2D game engine, developed by me using C++. Please note that this is my first engine, primarily created for educational purposes. It is written in C++ and utilizes the SFML library. The engine is comprised of two main components: the core and the app. The core is a static library housing the essential functions of the engine. The app serves as the executable for running the engine.
 
-## How to setup
-Premake is used to build the project to keep it as simple as possible.
-So here are the necessary steps:
-1. download the source code.
-2. customize the LuaScripts (Build.lua, Gale-Engine-Core/Build-Core.lua, Gale-Engine-App/Build-App.lua) if necessary
-3. execute the batch file in the scripts folder under Windows
-The project file should now have been created.
+## Setup
+The project uses Premake for building, aiming to keep the process as straightforward as possible. Here are the necessary steps:
 
-## How to use the Engine
-(Comming soon ...)
+1. Download the source code.
+2. Customize the LuaScripts (Build.lua, Gale-Engine-Core/Build-Core.lua, Gale-Engine-App/Build-App.lua) if needed.
+3. Execute the batch file in the scripts folder under Windows. The project file should now be created.
+
+##Using the Engine
+(More details coming soon...)
