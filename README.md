@@ -9,5 +9,5 @@ The project uses Premake for building, aiming to keep the process as straightfor
 2. Customize the LuaScripts (Build.lua, Gale-Engine-Core/Build-Core.lua, Gale-Engine-App/Build-App.lua) if needed.
 3. Execute the batch file in the scripts folder under Windows. The project file should now be created.
 
-##Using the Engine
+## Using the Engine
 (More details coming soon...)
